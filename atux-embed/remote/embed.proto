@@ -1,0 +1,20 @@
+syntax = "proto3";
+package grpc_bot;
+option go_package = "github.com/rodfer0x80/GoRPC/grpc_embed";
+
+service Embed {
+    rpc GetCommand (Empty) returns (Command);
+    rpc SendResult (Command) returns (Empty);
+}
+
+service Admin {
+    rpc ExecuteCommand (Command) returns (Command);
+}
+
+message Command {
+    string Input = 1;
+    string Output = 2;
+}
+// Empty message to use in place of null
+message Empty {
+}

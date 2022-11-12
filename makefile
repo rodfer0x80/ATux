@@ -1,6 +1,6 @@
 .PHONY: runserver
 runserver: 
-	./server/bin/main
+	./atux-server/bin/main
 
 .PHONY: buildserver 
 buildserver: 
@@ -8,11 +8,11 @@ buildserver:
 
 .PHONY: clean
 clean:
-	./scripts/clean
+	./scripts/clean.sh
 
 .PHONY: runembed
 runembed: 
-	./server/bin/main
+	./atux-embed/bin/main
 
 .PHONY: buildembed
 buildembed: 
