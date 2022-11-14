@@ -1,4 +1,4 @@
-package main
+package atux-api
 
 import "fmt"
 
